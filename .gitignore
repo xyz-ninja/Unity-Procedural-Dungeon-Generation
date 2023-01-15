@@ -1,0 +1,66 @@
+# All platforms:
+# Assets/FacebookSDK
+# Assets/Scripts/Facebook
+# Assets/Scripts/Facebook/*
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Visual Studio cache directory
+.vs/
+
+# Gradle cache directory /[Ll]ibrary/
+.gradle/
+
+# SDK
+# Assets/FacebookSDK/
+# Assets/FacebookSDK/*
+# Assets/Scripts/Facebook/
+# Assets/Scripts/Facebook/*
+# Assets/SystemAssets/FacebookSDK/
+# Assets/SystemAssets/FacebookSDK/*
+
+# Track directories, but not the contents
+
+# Include files
+!/foo/bar.xml
+
+# Include directories
+!/foo/bar/*
+# Assets/Plugins/Android/com.facebook*
+.idea/
+.idea
+
+/[Ll]ibrary/*
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Rr]ecordings/*
+
+# Ignore thumbnails created by windows
+Thumbs.db
+
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Ignore icon folder
+/Assets/IconPack/*
+/Assets/IconPack.meta
+
+Assets/UI Kit Pro - Kawaii/
+Assets/Sounds/All_Sounds/
