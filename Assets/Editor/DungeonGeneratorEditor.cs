@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class DungeonGeneratorEditor : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+[CustomEditor(typeof(AbstractDungeonGenerator), true)]
+public class DungeonGeneratorEditor : Editor {
+    
+    private AbstractDungeonGenerator _generator;
+
+    private void Awake() {
+        _generator = (AbstractDungeonGenerator) target;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public override void OnInspectorGUI() {
         
+        base.OnInspectorGUI();
+
+        if (GUILayout.Button("Create Dungeon")) {
+            _generator.GenerateDungeon();
+        }
+        
+        if (GUILayout.Button("Clear")) {
+            _generator.TilemapVisualizer.Clear();
+        }
     }
 }

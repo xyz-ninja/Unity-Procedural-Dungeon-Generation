@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{75fe52e0-d142-6d74-f8cc-0cfb1b1cfed2}</ProjectGuid>
+    <ProjectGuid>{68e34e16-850e-0804-76bf-a3b0fb1a81e2}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -41,11 +41,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Generators\ProceduralGenerationAlgorithms.cs" />
      <Compile Include="Assets\Scripts\Direction2D.cs" />
+     <Compile Include="Assets\Scripts\Generators\DungeonCorridorsGenerator.cs" />
+     <Compile Include="Assets\Scripts\Generators\WallGenerator.cs" />
+     <Compile Include="Assets\Scripts\Generators\AbstractDungeonGenerator.cs" />
+     <Compile Include="Assets\Scripts\Generators\ProceduralGenerationAlgorithms.cs" />
      <Compile Include="Assets\Scripts\Generators\WalkGenerator\SimpleWalkDungeonGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\TilemapVisualizer.cs" />
-     <Compile Include="Assets\Scripts\Generators\AbstractDungeonGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\WalkGenerator\WalkGeneratorData.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
@@ -53,6 +55,8 @@
      <Folder Include="Assets\Tiles\Palettes" />
      <Folder Include="Assets\Scripts\Generators" />
      <Folder Include="Assets\Settings" />
+     <Folder Include="Assets\SO\Generators\Walk" />
+     <Folder Include="Assets\SO\Generators" />
      <Folder Include="Assets\Settings\Scenes" />
      <None Include="Assets\Sprites\Dungeon\character and tileset\Licence.txt" />
      <Folder Include="Assets\Sprites\Dungeon\character and tileset" />
@@ -311,25 +315,25 @@
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -710,183 +714,183 @@
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
      <Reference Include="PsdPlugin">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Path.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="PPv2URPConverters">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
-      <Project>{19724724-d2e2-3b2f-9c57-72c7559877e1}</Project>
+      <Project>{09a9df51-8e98-4b29-bd1a-32c8ce8f27a6}</Project>
       <Name>NaughtyAttributes.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{63f36f92-7419-0697-4536-e4639f31adda}</Project>
-      <Name>NaughtyAttributes.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Test.csproj">
-      <Project>{3c355a7e-f3ad-46c8-9b2c-2c0ceef66449}</Project>
+      <Project>{52aa7e91-f374-ec04-7771-7a2e8f37e4d8}</Project>
       <Name>NaughtyAttributes.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="NaughtyAttributes.Core.csproj">
+      <Project>{f70761da-c36a-cf0d-b1c9-c04c3591f76b}</Project>
+      <Name>NaughtyAttributes.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3c355a7e-f3ad-46c8-9b2c-2c0ceef66449}</ProjectGuid>
+    <ProjectGuid>{52aa7e91-f374-ec04-7771-7a2e8f37e4d8}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -41,41 +41,41 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\_NaughtyScriptableObject.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\InputAxisTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ResizableTextAreaTest.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\OnValueChangedTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ShowAssetPreviewTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\_NaughtyComponent.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\InfoBoxTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ShowNonSerializedFieldTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\EnumFlagsTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\RequiredTest.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ExpandableTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\EnableIfTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\TagTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ReadOnlyTest.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ShowIfTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ShowNativePropertyTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\SceneTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\_TestScriptableObjectB.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\_TestScriptableObjectA.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\AnimatorParamTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\CurveRangeTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\HideIfTest.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\MinMaxValueTest.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\HorizontalLineTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\LabelTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\LayerTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ReadOnlyTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\MinMaxSliderTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\BoxGroupTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ButtonTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ResizableTextAreaTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\TagTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\HideIfTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ProgressBarTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\CurveRangeTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\RequiredTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ValidateInputTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\InfoBoxTest.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\DisableIfTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ShowNativePropertyTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\AnimatorParamTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ShowNonSerializedFieldTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\LabelTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\InputAxisTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\_NaughtyScriptableObject.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\_TestScriptableObjectA.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\BoxGroupTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ValidateInputTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ShowAssetPreviewTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ButtonTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\_NaughtyComponent.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\SceneTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\MinMaxSliderTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\EnumFlagsTest.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\DropdownTest.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\FoldoutTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\_TestScriptableObjectB.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ReorderableListTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\EnableIfTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\LayerTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\ProgressBarTest.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\FoldoutTest.cs" />
      <Folder Include="Assets\Plugins\NaughtyAttributes\Scripts\Test" />
      <None Include="Assets\Plugins\NaughtyAttributes\Scripts\Test\NaughtyAttributes.Test.asmdef" />
      <Reference Include="UnityEngine">
@@ -337,46 +337,46 @@
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -757,15 +757,15 @@
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{63f36f92-7419-0697-4536-e4639f31adda}</Project>
+      <Project>{f70761da-c36a-cf0d-b1c9-c04c3591f76b}</Project>
       <Name>NaughtyAttributes.Core</Name>
     </ProjectReference>
   </ItemGroup>

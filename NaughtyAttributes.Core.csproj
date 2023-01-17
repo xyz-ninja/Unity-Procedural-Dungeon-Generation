@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{63f36f92-7419-0697-4536-e4639f31adda}</ProjectGuid>
+    <ProjectGuid>{f70761da-c36a-cf0d-b1c9-c04c3591f76b}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -41,49 +41,49 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ShowNonSerializedFieldAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\Utility\EColor.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\InputAxisAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ReorderableListAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\BoxGroupAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\FoldoutAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\EnumFlagsAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\InfoBoxAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ShowNativePropertyAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\DropdownAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\RequiredAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\SpecialCaseDrawerAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\EnableIfAttributeBase.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\ReadOnlyAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\IGroupAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\ProgressBarAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\AnimatorParamAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\MinValueAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\ResizableTextAreaAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\DrawerAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\ShowIfAttributeBase.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\ShowIfAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\MaxValueAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\LayerAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\Utility\EConditionOperator.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\AllowNestingAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\TagAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\ValidatorAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\EnableIfAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\HideIfAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\Expandable.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\ValidateInputAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\MetaAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\SceneAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\LabelAttribute.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\ShowAssetPreviewAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ButtonAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\INaughtyAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\OnValueChangedAttribute.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\MinMaxSliderAttribute.cs" />
-     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\CurveRangeAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\ShowIfAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\EnumFlagsAttribute.cs" />
      <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\DisableIfAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\ResizableTextAreaAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\EnableIfAttributeBase.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\DrawerAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ShowNativePropertyAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\MaxValueAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\ProgressBarAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\ValidateInputAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ReorderableListAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\MetaAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\ValidatorAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ShowNonSerializedFieldAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\TagAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\IGroupAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\OnValueChangedAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\LayerAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\AnimatorParamAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\CurveRangeAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\Utility\EConditionOperator.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\EnableIfAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\Expandable.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\InputAxisAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\SpecialCaseDrawerAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\ReadOnlyAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\RequiredAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\HideIfAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\DropdownAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\Utility\EColor.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\FoldoutAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\LabelAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\INaughtyAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\BoxGroupAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\MinValueAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\InfoBoxAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ButtonAttribute.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\ShowIfAttributeBase.cs" />
+     <Compile Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\SceneAttribute.cs" />
      <Folder Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes" />
      <None Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\NaughtyAttributes.Core.asmdef" />
      <Folder Include="Assets\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes" />
@@ -350,46 +350,46 @@
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -770,10 +770,10 @@
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>G:\Unity\Procedural Dungeon Generation\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>G:\Unity\Unity-Procedural-Dungeon-Generation\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
