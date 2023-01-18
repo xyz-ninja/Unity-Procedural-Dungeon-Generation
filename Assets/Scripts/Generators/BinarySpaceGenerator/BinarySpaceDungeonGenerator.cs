@@ -24,8 +24,16 @@ public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
             _minRoomHeight);
         
         var floor = new HashSet<Vector2Int>();
-        floor = CreateSimpleRooms(rooms);
-        
+
+        if (_randomWalkRooms) {
+
+            floor = CreateRandomWalkRooms(rooms);
+
+        } else {
+            
+            floor = CreateSimpleRooms(rooms);
+        }
+
         var roomCenters = new List<Vector2Int>();
         foreach (var room in rooms) {
             roomCenters.Add((Vector2Int)Vector3Int.RoundToInt(room.center));
@@ -36,6 +44,31 @@ public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
         
         _tilemapVisualizer.DrawFloorTiles(floor);
         WallGenerator.CreateWalls(floor, _tilemapVisualizer);
+    }
+
+    private HashSet<Vector2Int> CreateRandomWalkRooms(List<BoundsInt> rooms) {
+        
+        var floor = new HashSet<Vector2Int>();
+        
+        for (int i = 0; i < rooms.Count; i++) {
+            
+            var roomBounds = rooms[i];
+            var roomCenter = new Vector2Int(
+                Mathf.RoundToInt(roomBounds.center.x),
+                Mathf.RoundToInt(roomBounds.center.y));
+
+            var roomFloor = RunRandomWalk(_data, roomCenter);
+            foreach (var position in roomFloor) {
+                // check offset
+                if (position.x >= (roomBounds.xMin + _offset) && position.x <= (roomBounds.xMax - _offset) &&
+                    position.y >= (roomBounds.yMin - _offset) && position.y <= (roomBounds.yMax + _offset)) {
+
+                    floor.Add(position);
+                }
+            }
+        }
+
+        return floor;
     }
 
     private HashSet<Vector2Int> CreateSimpleRooms(List<BoundsInt> rooms) {
