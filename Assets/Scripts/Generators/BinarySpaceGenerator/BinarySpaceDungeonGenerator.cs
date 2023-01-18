@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
     
+    [Header("Binary Space Parametres")]
     [SerializeField] private int _minRoomWidth = 4;
     [SerializeField] private int _minRoomHeight = 4;
 
@@ -11,7 +12,8 @@ public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
 
     [SerializeField, Range(0, 10)] private int _offset = 1; // addit offset for walls
     [SerializeField] private bool _randomWalkRooms = false;
-
+    [SerializeField] private bool _wideCorridors = true;
+    
     protected override void RunGeneration() {
         CreateRooms();
     }
@@ -26,11 +28,8 @@ public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
         var floor = new HashSet<Vector2Int>();
 
         if (_randomWalkRooms) {
-
             floor = CreateRandomWalkRooms(rooms);
-
         } else {
-            
             floor = CreateSimpleRooms(rooms);
         }
 
@@ -109,6 +108,7 @@ public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
         return corridors;
     }
 
+    private List<Vector2Int> _additCorridorPositions = new List<Vector2Int>();
     private HashSet<Vector2Int> CreateCorridor(Vector2Int startPosition, Vector2Int destinationPosition) {
         
         var corridor = new HashSet<Vector2Int>();
@@ -118,15 +118,34 @@ public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
 
         while (currentPosition.y != destinationPosition.y) {
             
+            _additCorridorPositions.Clear();
+            
             if (destinationPosition.y > currentPosition.y) {
+                
                 currentPosition += Vector2Int.up;
+                //_additCorridorPositions.Add(currentPosition + new Vector2Int(-1, 0));
+                //_additCorridorPositions.Add(currentPosition + new Vector2Int(1, 0));
+                
             } else if (destinationPosition.y < currentPosition.y) {
                 currentPosition += Vector2Int.down;
+                //_additCorridorPositions.Add(currentPosition + new Vector2Int(-1, 0));
+                //_additCorridorPositions.Add(currentPosition + new Vector2Int(1, 0));
+                
             } else {
                 break;
             }
 
             corridor.Add(currentPosition);
+            
+            if (_wideCorridors) {
+                
+                _additCorridorPositions.Add(currentPosition + new Vector2Int(-1, 0));
+                _additCorridorPositions.Add(currentPosition + new Vector2Int(1, 0));
+                
+                foreach (var additPosition in _additCorridorPositions) {
+                    corridor.Add(additPosition);
+                }
+            }
         }
         
         while (currentPosition.x != destinationPosition.x) {
@@ -140,6 +159,15 @@ public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
             }
 
             corridor.Add(currentPosition);
+
+            if (_wideCorridors) {
+                _additCorridorPositions.Add(currentPosition + new Vector2Int(0, 1));
+                _additCorridorPositions.Add(currentPosition + new Vector2Int(0, -1));
+                
+                foreach (var additPosition in _additCorridorPositions) {
+                    corridor.Add(additPosition);
+                }
+            }
         }
 
         return corridor;
