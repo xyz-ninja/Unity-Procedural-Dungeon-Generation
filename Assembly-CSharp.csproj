@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Generators\WalkGenerator\SimpleWalkDungeonGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\TilemapVisualizer.cs" />
      <Compile Include="Assets\Scripts\Generators\WalkGenerator\WalkGeneratorData.cs" />
+     <Compile Include="Assets\Scripts\Generators\BinarySpaceGenerator\BinarySpaceDungeonGenerator.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Tiles" />
@@ -68,6 +69,7 @@
      <Folder Include="Assets\Sprites" />
      <Folder Include="Assets\Tiles\Tiles" />
      <Folder Include="Assets\Sprites\Dungeon" />
+     <Folder Include="Assets\Scripts\Generators\BinarySpaceGenerator" />
      <Reference Include="UnityEngine">
      <HintPath>D:\UnityEditors\2021.3.15f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
