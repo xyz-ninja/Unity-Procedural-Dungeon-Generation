@@ -26,6 +26,14 @@ public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
         var floor = new HashSet<Vector2Int>();
         floor = CreateSimpleRooms(rooms);
         
+        var roomCenters = new List<Vector2Int>();
+        foreach (var room in rooms) {
+            roomCenters.Add((Vector2Int)Vector3Int.RoundToInt(room.center));
+        }
+
+        var corridors = GenerateCorridors(roomCenters);
+        floor.UnionWith(corridors);
+        
         _tilemapVisualizer.DrawFloorTiles(floor);
         WallGenerator.CreateWalls(floor, _tilemapVisualizer);
     }
@@ -45,5 +53,85 @@ public class BinarySpaceDungeonGenerator : SimpleWalkDungeonGenerator {
         }
 
         return floor;
+    }
+    
+    private HashSet<Vector2Int> GenerateCorridors(List<Vector2Int> roomCenters) {
+        
+        var corridors = new HashSet<Vector2Int>();
+        var currentRoomCenter = roomCenters[Random.Range(0, roomCenters.Count)];
+
+        roomCenters.Remove(currentRoomCenter);
+
+        while (roomCenters.Count > 0) {
+            
+            var closestCenterPoint = GetClosestPoint(currentRoomCenter, roomCenters);
+            roomCenters.Remove(closestCenterPoint);
+
+            var newCorridor = CreateCorridor(currentRoomCenter, closestCenterPoint);
+            currentRoomCenter = closestCenterPoint;
+            
+            corridors.UnionWith(newCorridor);
+        }
+
+        return corridors;
+    }
+
+    private HashSet<Vector2Int> CreateCorridor(Vector2Int startPosition, Vector2Int destinationPosition) {
+        
+        var corridor = new HashSet<Vector2Int>();
+
+        var currentPosition = startPosition;
+        corridor.Add(currentPosition);
+
+        while (currentPosition.y != destinationPosition.y) {
+            
+            if (destinationPosition.y > currentPosition.y) {
+                currentPosition += Vector2Int.up;
+            } else if (destinationPosition.y < currentPosition.y) {
+                currentPosition += Vector2Int.down;
+            } else {
+                break;
+            }
+
+            corridor.Add(currentPosition);
+        }
+        
+        while (currentPosition.x != destinationPosition.x) {
+            
+            if (destinationPosition.x > currentPosition.x) {
+                currentPosition += Vector2Int.right;
+            } else if (destinationPosition.x < currentPosition.x) {
+                currentPosition += Vector2Int.left;
+            } else {
+                break;
+            }
+
+            corridor.Add(currentPosition);
+        }
+
+        return corridor;
+    }
+
+    private Vector2Int GetClosestPoint(Vector2Int point, List<Vector2Int> allPoints) {
+        
+        var closestPoint = Vector2Int.zero;
+        float minDistance = float.MaxValue;
+
+        foreach (var position in allPoints) {
+
+            if (position == point) {
+                continue;
+            }
+            
+            var distance = Vector2.Distance(position, point);
+            if (distance < minDistance) {
+
+                closestPoint = position;
+                
+                minDistance = distance;
+            }
+        }
+
+        return closestPoint;
     }
 }
