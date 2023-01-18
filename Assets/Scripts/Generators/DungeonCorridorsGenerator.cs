@@ -23,14 +23,48 @@ public class DungeonCorridorsGenerator : SimpleWalkDungeonGenerator {
         CreateCorridors(floorPositions, potentialRoomPositions);
 
         var roomPositions = CreateRooms(potentialRoomPositions);
+        var deadEndPositions = FindDeadEnds(floorPositions);
 
+        CreateRoomsAtDeadEnds(deadEndPositions, roomPositions);
+        
         floorPositions.UnionWith(roomPositions);
         
         _tilemapVisualizer.DrawFloorTiles(floorPositions);
         WallGenerator.CreateWalls(floorPositions, _tilemapVisualizer);
     }
 
-    private List<Vector2Int> _roomsToCreate;
+    private void CreateRoomsAtDeadEnds(List<Vector2Int> deadEndPositions, HashSet<Vector2Int> roomPositions) {
+        foreach (var position in deadEndPositions) {
+            if (roomPositions.Contains(position) == false) {
+                var roomFloor = RunRandomWalk(_data, position);
+                roomPositions.UnionWith(roomFloor);
+            }
+        }
+    }
+
+    private List<Vector2Int> FindDeadEnds(HashSet<Vector2Int> floorPositions) {
+        
+        var deadEnds = new List<Vector2Int>();
+        
+        foreach (var position in floorPositions) {
+            
+            int neighboursCount = 0;
+            
+            foreach (var direction in Direction2D.cardinalDirections) {
+                if (floorPositions.Contains(position + direction)) {
+                    neighboursCount += 1;
+                }
+            }
+            
+            if (neighboursCount == 1) {
+                deadEnds.Add(position);
+            }
+        }
+
+        return deadEnds;
+    }
+
+    private List<Vector2Int> _roomsToCreate = new List<Vector2Int>();
     private HashSet<Vector2Int> CreateRooms(HashSet<Vector2Int> potentialRoomPositions) {
         
         _roomsToCreate.Clear();
